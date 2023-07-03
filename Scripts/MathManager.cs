@@ -43,30 +43,34 @@ public class MathManager : MonoBehaviour
             secondNumber = Random.Range(0, 9);
         }
 
-        sumCalc(firstNumber, secondNumber);
+        SumCalc(firstNumber, secondNumber);
     }
 
-    public void sumCalc(int a, int b)
+    public void SumCalc(int a, int b)
     {
         sum = a + b;
-        stateChanger();
+        StateChanger();
         imgChanger.OnFirstStateChange();
-        syntaxChanger();
+        SyntaxChanger();
         noticeText.text = $"{firstNumber} 더하기 {secondNumber}{nonParticle} {sum}{objParticle} 같습니다.";
     }
 
-    public void syntaxChanger()
+    public void SyntaxChanger()
     {
         nonParticle = (secondNumber == 0 || secondNumber == 1 || secondNumber == 3 || secondNumber == 6 || secondNumber == 7 || secondNumber == 8) ? "은" : "는";
         objParticle = (sum == 0 || sum == 1 || sum == 3 || sum == 6 || sum == 7 || sum == 8) ? "과" : "와";
     }
 
 
-    public void stateChanger()
+    public void StateChanger()
     {
-
         firstState = (SelectState)firstNumber;
         secondState = (SelectState)secondNumber;
         sumState = (SelectState)sum;
+    }
+
+    public void MathResult()
+    {
+
     }
 }

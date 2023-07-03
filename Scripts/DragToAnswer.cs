@@ -13,6 +13,7 @@ public class DragToAnswer : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public List<Image> answerSprite = new List<Image>(); // 답변 카드 이미지
     public float detectRange; // 감지 범위
 
+
     void Start()
     {
         originPos = GetComponent<RectTransform>().position; // 답변 카드 위치 초기화
