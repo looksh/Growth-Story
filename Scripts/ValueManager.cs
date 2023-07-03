@@ -8,7 +8,7 @@ public class ValueManager : MonoBehaviour
     public GameObject selectCard = null;
 
     public int value;
-    public int reserveValue;
+    public int reserveValue = 0;
 
     void Start()
     {
@@ -41,8 +41,14 @@ public class ValueManager : MonoBehaviour
     // 감지된 값 전달 받는 함수
     public void ReceiveValue(int detectedValue)
     {
-        reserveValue = detectedValue;
+        reserveValue += detectedValue;
         // 감지된 값에 대한 처리 로직 작성
         Debug.Log("Received value: " + reserveValue);
     }
+
+    //public void ResetValue(int detectedValue)
+    //{
+    //    reserveValue -= detectedValue;
+    //    Debug.Log("Reset value: " + reserveValue);
+    //}
 }
