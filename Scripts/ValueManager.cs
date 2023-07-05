@@ -46,9 +46,9 @@ public class ValueManager : MonoBehaviour
         Debug.Log("Received value: " + reserveValue);
     }
 
-    //public void ResetValue(int detectedValue)
-    //{
-    //    reserveValue -= detectedValue;
-    //    Debug.Log("Reset value: " + reserveValue);
-    //}
+    public void ResetValue()
+    {
+        reserveValue = 0;
+        Debug.Log("Reset value: " + reserveValue);
+    }
 }
