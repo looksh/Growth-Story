@@ -18,24 +18,28 @@ public class ValueManager : MonoBehaviour
     IEnumerator getValue()
     {
         yield return new WaitForSeconds(0.1f);
-        switch (selectCard.name)
+
+        if (selectCard != null )
         {
-            case "first":
-                {
-                    value = manager.firstNumber;
-                    break;
-                }
-            case "second":
-                {
-                    value = manager.secondNumber;
-                    break;
-                }
-            case "sum":
-                {
-                    value = manager.sum;
-                    break;
-                }
-        }
+            switch (selectCard.name)
+            {
+                case "first":
+                    {
+                        value = manager.firstNumber;
+                        break;
+                    }
+                case "second":
+                    {
+                        value = manager.secondNumber;
+                        break;
+                    }
+                case "sum":
+                    {
+                        value = manager.sum;
+                        break;
+                    }
+            }
+        } 
     }
 
     public void ReceiveValue(int detectedValue)

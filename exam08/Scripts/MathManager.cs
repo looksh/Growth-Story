@@ -62,14 +62,10 @@ public class MathManager : MonoBehaviour
         equalSize = GameObject.Find("equal").GetComponent<RectTransform>().sizeDelta;
     }
 
-    void Start()
+    public void OnEnable()
     {
         RandomNotice();
-    }
-
-    private void Update()
-    {
-
+        Debug.Log("시작합니다");
     }
 
     public void RandomNotice()
@@ -122,6 +118,8 @@ public class MathManager : MonoBehaviour
                 //StartCoroutine(Result());
                 Debug.Log("넘어가요");
                 SuccessGame();
+                //valueManager.ResetValue();
+
             }
             else
             {
