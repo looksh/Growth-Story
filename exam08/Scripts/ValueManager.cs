@@ -10,7 +10,7 @@ public class ValueManager : MonoBehaviour
     public int value;
     public int reserveValue = 0;
 
-    void Start()
+    public void Start()
     {
         StartCoroutine(getValue());
     }
@@ -38,17 +38,18 @@ public class ValueManager : MonoBehaviour
         }
     }
 
-    // 감지된 값 전달 받는 함수
     public void ReceiveValue(int detectedValue)
     {
         reserveValue += detectedValue;
-        // 감지된 값에 대한 처리 로직 작성
-        Debug.Log("Received value: " + reserveValue);
     }
 
     public void ResetValue()
     {
         reserveValue = 0;
-        Debug.Log("Reset value: " + reserveValue);
+    }
+
+    public void ReduceValue(int detectedValue)
+    {
+        reserveValue -= detectedValue;
     }
 }

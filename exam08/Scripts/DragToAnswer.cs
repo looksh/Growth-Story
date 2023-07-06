@@ -17,43 +17,15 @@ public class DragToAnswer : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 {
     public MathManager manager;
     public ValueManager valueManager;
+    
 
     public static Vector2 startPos; // 시작 위치
     private Vector2 originPos; // 초기화 위치
     private Vector2 originSize; // 원래 크기
     public float detectRange; // 감지 범위
     public InAndOut inAndOut = InAndOut.UnFit;
-    public GameObject resultText;
-    public GameObject failedText;
 
-    private Vector2 firstPos;
-    private Vector2 secondPos;
-    private Vector2 sumPos;
-    private Vector2 plusPos;
-    private Vector2 equalPos;
-
-    private Vector2 firstSize;
-    private Vector2 secondSize;
-    private Vector2 sumSize;
-    private Vector2 plusSize;
-    private Vector2 equalSize;
-
-    private void Awake()
-    {
-        firstPos = GameObject.Find("first").GetComponent<RectTransform>().position;
-        secondPos = GameObject.Find("second").GetComponent<RectTransform>().position;
-        sumPos = GameObject.Find("sum").GetComponent<RectTransform>().position;
-        plusPos = GameObject.Find("plus").GetComponent<RectTransform>().position;
-        equalPos = GameObject.Find("equal").GetComponent<RectTransform>().position;
-
-        firstSize = GameObject.Find("first").GetComponent<RectTransform>().sizeDelta;
-        secondSize = GameObject.Find("second").GetComponent<RectTransform>().sizeDelta;
-        sumSize = GameObject.Find("sum").GetComponent<RectTransform>().sizeDelta;
-        plusSize = GameObject.Find("plus").GetComponent<RectTransform>().sizeDelta;
-        equalSize = GameObject.Find("equal").GetComponent<RectTransform>().sizeDelta;
-    }
-
-    void Start()
+    public void Start()
     {
         originPos = GetComponent<RectTransform>().position; // 답변 카드 위치 초기화
         originSize = GetComponent<RectTransform>().sizeDelta; // 원래 크기 저장 
@@ -62,9 +34,16 @@ public class DragToAnswer : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     // 드래그 시작
     public void OnBeginDrag(PointerEventData eventData)
     {
+        Transform objTransform = eventData.pointerEnter.transform;
+
         startPos = this.transform.position; // 시작 위치 초기화
         GetComponent<RectTransform>().sizeDelta = originSize; // 원래 크기로
-        inAndOut = InAndOut.UnFit;
+
+        if (objTransform.GetComponent<DragToAnswer>().inAndOut == InAndOut.Fit)
+        {
+            valueManager.ReduceValue(eventData.pointerEnter.GetComponent<ValueManager>().value);
+            inAndOut = InAndOut.UnFit;
+        }
     }
 
     // 드래그 중
@@ -121,65 +100,6 @@ public class DragToAnswer : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 }
         }
 
-
-        // 모든 객체가 Fit인지 검사
-        if (GameObject.Find("first").GetComponent<DragToAnswer>().inAndOut == InAndOut.Fit 
-            && GameObject.Find("second").GetComponent<DragToAnswer>().inAndOut == InAndOut.Fit
-            && GameObject.Find("sum").GetComponent<DragToAnswer>().inAndOut == InAndOut.Fit
-            && GameObject.Find("plus").GetComponent<DragToAnswer>().inAndOut == InAndOut.Fit
-            && GameObject.Find("equal").GetComponent<DragToAnswer>().inAndOut == InAndOut.Fit) 
-        {
-            // 여기서 정답이 맞는지 검사
-            if (GameObject.Find("sum").GetComponent<ValueManager>().value == valueManager.reserveValue)
-            {
-                // 정답
-                StartCoroutine(Result());
-            }
-            else
-            {
-                // 실패
-                valueManager.ResetValue();
-                StartCoroutine(Failed());
-                
-            }
-        }
-    }
-
-    void ResetTransform()
-    {
-        GameObject.Find("first").GetComponent<RectTransform>().position = firstPos;
-        GameObject.Find("second").GetComponent<RectTransform>().position = secondPos;
-        GameObject.Find("sum").GetComponent<RectTransform>().position = sumPos;
-        GameObject.Find("plus").GetComponent<RectTransform>().position = plusPos;
-        GameObject.Find("equal").GetComponent<RectTransform>().position = equalPos;
-
-        GameObject.Find("first").GetComponent<RectTransform>().sizeDelta = firstSize;
-        GameObject.Find("second").GetComponent<RectTransform>().sizeDelta = secondSize;
-        GameObject.Find("sum").GetComponent<RectTransform>().sizeDelta = sumSize;
-        GameObject.Find("plus").GetComponent<RectTransform>().sizeDelta = plusSize;
-        GameObject.Find("equal").GetComponent<RectTransform>().sizeDelta = equalSize;
-
-        GameObject.Find("first").GetComponent<DragToAnswer>().inAndOut = InAndOut.UnFit;
-        GameObject.Find("second").GetComponent<DragToAnswer>().inAndOut = InAndOut.UnFit;
-        GameObject.Find("sum").GetComponent<DragToAnswer>().inAndOut = InAndOut.UnFit;
-        GameObject.Find("plus").GetComponent<DragToAnswer>().inAndOut = InAndOut.UnFit;
-        GameObject.Find("equal").GetComponent<DragToAnswer>().inAndOut = InAndOut.UnFit;
-    }
-
-    IEnumerator Result()
-    {
-        yield return new WaitForSeconds(0.5f);
-        resultText.SetActive(true);
-        yield return new WaitForSeconds(3.0f);
-        SceneManager.LoadScene("MathOperation");
-    }
-
-    IEnumerator Failed()
-    {
-        yield return new WaitForSeconds(0.5f);
-        failedText.SetActive(true);
-        yield return new WaitForSeconds(1.5f);
-        ResetTransform();
-        failedText.SetActive(false);
+        manager.MathResult();
     }
 }
