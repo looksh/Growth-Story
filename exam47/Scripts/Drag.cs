@@ -5,10 +5,10 @@ using UnityEngine.EventSystems;
 
 public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public Answer answer;
     public static Vector2 startPos; // 시작 위치
     private Vector2 originPos; // 초기화 위치
     private Vector2 originSize; // 원래 크기
-    public float detectRange; // 감지 범위
 
     void Start()
     {
@@ -33,7 +33,6 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     public void OnEndDrag(PointerEventData eventData)
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        Debug.Log("도착");
+        answer.IsCorrect(eventData);
     }
 }

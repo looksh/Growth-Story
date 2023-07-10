@@ -6,23 +6,13 @@ public class LaundryBoard : MonoBehaviour
 {
     public List<GameObject> LaundryList; // 빨랫감 프리팹 리스트 
     private int NumberOfLaundry;
-
-    // 난수 얻기 int
-    public int GetRandomCountI()
-    {
-        return NumberOfLaundry;
-    }
-
-    // 난수 얻기 string
-    public string GetRandomCountS()
-    {
-        return NumberOfLaundry.ToString();
-    }
+    public bool IsFuncExec = false;
 
     // 빨랫감 생성하기
     public IEnumerator CreateLaundry()
     {
         yield return new WaitForSeconds(1.5f);
+        IsFuncExec = true;
 
         // 난수 생성하기
         NumberOfLaundry = Random.Range(0, 10);
@@ -38,4 +28,17 @@ public class LaundryBoard : MonoBehaviour
             laundryObject.transform.SetParent(transform);
         }
     }
+
+    // 난수 얻기 int
+    public int GetRandomCountI()
+    {
+        return NumberOfLaundry;
+    }
+
+    // 난수 얻기 string
+    public string GetRandomCountS()
+    {
+        return NumberOfLaundry.ToString();
+    }
+
 }
