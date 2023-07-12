@@ -12,6 +12,7 @@ public class ValueManager : MonoBehaviour
 
     public void Start()
     {
+        
         StartCoroutine(getValue());
     }
 

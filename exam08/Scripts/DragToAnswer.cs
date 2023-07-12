@@ -59,7 +59,7 @@ public class DragToAnswer : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Transform objTransform = eventData.pointerEnter.transform;
         string objName = eventData.pointerEnter.name;
-        int layerMask = 1 << 6; // 레이어6 감지하기
+        int layerMask = 1 << 6; // 6번 레이어
         var hits = Physics.SphereCastAll(transform.position, detectRange, Vector3.up, 0, layerMask);
 
 

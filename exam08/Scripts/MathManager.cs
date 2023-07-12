@@ -115,11 +115,8 @@ public class MathManager : MonoBehaviour
             if (GameObject.Find("sum").GetComponent<ValueManager>().value == valueManager.reserveValue)
             {
                 // 정답
-                //StartCoroutine(Result());
-                Debug.Log("넘어가요");
                 SuccessGame();
-                //valueManager.ResetValue();
-
+                
             }
             else
             {
@@ -149,12 +146,6 @@ public class MathManager : MonoBehaviour
         GameObject.Find("sum").GetComponent<DragToAnswer>().inAndOut = InAndOut.UnFit;
         GameObject.Find("plus").GetComponent<DragToAnswer>().inAndOut = InAndOut.UnFit;
         GameObject.Find("equal").GetComponent<DragToAnswer>().inAndOut = InAndOut.UnFit;
-    }
-
-    IEnumerator Result()
-    {
-        //resultText.SetActive(true);
-        yield return new WaitForSeconds(2.0f); 
     }
 
     IEnumerator Failed()
