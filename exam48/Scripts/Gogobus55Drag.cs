@@ -9,7 +9,6 @@ public class Gogobus55Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public float detectRange;
     public Gogobus55SuccessCount successObj;
     public Gogobus55Image img;
-    public GameClearController gameClearController;
     private Vector2 originPos; // 초기화 위치
     private Vector2 originSize; // 원래 크기
     
@@ -50,13 +49,16 @@ public class Gogobus55Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             if (detectState.state == pointerState.state)
             {
                 GetComponent<RectTransform>().position = new Vector3(hits[0].transform.position.x, hits[0].transform.position.y, hits[0].transform.position.z);
+                // 같다면 성공카운트 증가
                 successObj.IncreseCount();
-
+                
                 if (successObj.GetSuccessCount() == 2)
                 {
                     img.ChangeImg();
-                    StartCoroutine(SuccessGame());
                 }
+
+                // Drag 컴포넌트 제거
+                Destroy(GetComponent<Gogobus55Drag>());
             }
             else
             {
@@ -66,9 +68,5 @@ public class Gogobus55Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         }
     }
 
-    IEnumerator SuccessGame()
-    {
-        yield return new WaitForSeconds(2.0f);
-        gameClearController.UpdateClearCount();
-    }
+    
 }
