@@ -25,7 +25,7 @@ public class Gogobus55Answer : MonoBehaviour
 
 
         // row1의 아이템과 겹치지 않도록 하는 로직
-        while (rowIndex1 != rowIndex2)
+        while (rowIndex1 == rowIndex2)
         {
             rowIndex2 = Random.Range(0, objectList2.Count);
         }
