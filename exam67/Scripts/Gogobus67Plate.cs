@@ -6,21 +6,38 @@ public class Gogobus67Plate : MonoBehaviour
 {
 
     public List<GameObject> list = new();
+    public GameObject operation;
+    public bool isExcute = false;
 
-    private int disappearCount;
+    private int DisappearCount;
 
     private void Start()
     {
-        CreateGimbab();
+        StartCoroutine(CreateGimbab());
+        StartCoroutine(ShowOperation());
     }
 
-    void CreateGimbab()
+    IEnumerator CreateGimbab()
     {
-        disappearCount = Random.Range(1, 7); // 사라질 김밥 개수 정하기
+        yield return new WaitForSeconds(1f);
+        DisappearCount = Random.Range(1, 10); // 사라질 김밥 개수 정하기
+        Debug.Log(DisappearCount);
 
-        for (int i = 0; i < disappearCount; i++)
+        for (int i = 0; i < DisappearCount; i++)
         {
-            list[i].SetActive(false);
+            Destroy(list[i]);
         }
+        isExcute = true;
+    }
+
+    IEnumerator ShowOperation()
+    {
+        yield return new WaitForSeconds(2f);
+        operation.SetActive(true);
+    }
+
+    public int ReturnDisappearCount()
+    {
+        return DisappearCount;
     }
 }
