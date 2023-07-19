@@ -432,10 +432,10 @@ RectTransform:
   m_Father: {fileID: 90206059}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 88, y: -74}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &228047595
 MonoBehaviour:
@@ -519,8 +519,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1792759889}
-        m_TargetAssemblyTypeName: Gogobus67Value, Assembly-CSharp
+      - m_Target: {fileID: 228047598}
+        m_TargetAssemblyTypeName: Gogobus67Number, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -544,6 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberCard: {fileID: 228047593}
+  gogobus67Value: {fileID: 1792759889}
   value: 0
 --- !u!1 &236126844
 GameObject:
@@ -1044,6 +1045,7 @@ MonoBehaviour:
   - {fileID: 641263076}
   - {fileID: 1287083283}
   - {fileID: 24567559}
+  operation: {fileID: 1891480411}
   isExcute: 0
 --- !u!1 &622011686
 GameObject:
@@ -1232,10 +1234,10 @@ RectTransform:
   m_Father: {fileID: 90206059}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 88, y: -180}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &677251217
 MonoBehaviour:
@@ -1319,8 +1321,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1792759889}
-        m_TargetAssemblyTypeName: Gogobus67Value, Assembly-CSharp
+      - m_Target: {fileID: 677251220}
+        m_TargetAssemblyTypeName: Gogobus67Number, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -1344,6 +1346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberCard: {fileID: 677251215}
+  gogobus67Value: {fileID: 1792759889}
   value: 5
 --- !u!1 &809895824
 GameObject:
@@ -1548,10 +1551,10 @@ RectTransform:
   m_Father: {fileID: 90206059}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 194, y: -74}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &869666242
 MonoBehaviour:
@@ -1635,8 +1638,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1792759889}
-        m_TargetAssemblyTypeName: Gogobus67Value, Assembly-CSharp
+      - m_Target: {fileID: 869666245}
+        m_TargetAssemblyTypeName: Gogobus67Number, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -1660,6 +1663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberCard: {fileID: 869666240}
+  gogobus67Value: {fileID: 1792759889}
   value: 1
 --- !u!1 &940151979
 GameObject:
@@ -1772,10 +1776,10 @@ RectTransform:
   m_Father: {fileID: 90206059}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 512, y: -74}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &941741094
 MonoBehaviour:
@@ -1859,8 +1863,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1792759889}
-        m_TargetAssemblyTypeName: Gogobus67Value, Assembly-CSharp
+      - m_Target: {fileID: 941741097}
+        m_TargetAssemblyTypeName: Gogobus67Number, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -1884,6 +1888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberCard: {fileID: 941741092}
+  gogobus67Value: {fileID: 1792759889}
   value: 4
 --- !u!1 &971714220
 GameObject:
@@ -1920,10 +1925,10 @@ RectTransform:
   m_Father: {fileID: 90206059}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 300, y: -180}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &971714222
 MonoBehaviour:
@@ -2007,8 +2012,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1792759889}
-        m_TargetAssemblyTypeName: Gogobus67Value, Assembly-CSharp
+      - m_Target: {fileID: 971714225}
+        m_TargetAssemblyTypeName: Gogobus67Number, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -2032,6 +2037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberCard: {fileID: 971714220}
+  gogobus67Value: {fileID: 1792759889}
   value: 7
 --- !u!1 &1059380871
 GameObject:
@@ -2162,10 +2168,10 @@ RectTransform:
   m_Father: {fileID: 90206059}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 512, y: -180}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1060958792
 MonoBehaviour:
@@ -2249,8 +2255,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1792759889}
-        m_TargetAssemblyTypeName: Gogobus67Value, Assembly-CSharp
+      - m_Target: {fileID: 1060958795}
+        m_TargetAssemblyTypeName: Gogobus67Number, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -2274,6 +2280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberCard: {fileID: 1060958790}
+  gogobus67Value: {fileID: 1792759889}
   value: 9
 --- !u!1 &1167232002
 GameObject:
@@ -2590,10 +2597,10 @@ RectTransform:
   m_Father: {fileID: 90206059}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 406, y: -74}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1491010500
 MonoBehaviour:
@@ -2677,8 +2684,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1792759889}
-        m_TargetAssemblyTypeName: Gogobus67Value, Assembly-CSharp
+      - m_Target: {fileID: 1491010503}
+        m_TargetAssemblyTypeName: Gogobus67Number, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -2702,6 +2709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberCard: {fileID: 1491010498}
+  gogobus67Value: {fileID: 1792759889}
   value: 3
 --- !u!1 &1688027748
 GameObject:
@@ -3072,10 +3080,10 @@ RectTransform:
   m_Father: {fileID: 90206059}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 406, y: -180}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1751057944
 MonoBehaviour:
@@ -3159,8 +3167,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1792759889}
-        m_TargetAssemblyTypeName: Gogobus67Value, Assembly-CSharp
+      - m_Target: {fileID: 1751057947}
+        m_TargetAssemblyTypeName: Gogobus67Number, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -3184,6 +3192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberCard: {fileID: 1751057942}
+  gogobus67Value: {fileID: 1792759889}
   value: 8
 --- !u!1 &1792759887
 GameObject:
@@ -3238,7 +3247,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plate: {fileID: 467516077}
   imageChanger: {fileID: 1167232004}
-  number: {fileID: 228047598}
   clearController: {fileID: 1692313662}
   card: {fileID: 1792759887}
   disappearValue: 0
@@ -3316,10 +3324,10 @@ RectTransform:
   m_Father: {fileID: 90206059}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 300, y: -74}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1796500063
 MonoBehaviour:
@@ -3403,8 +3411,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1792759889}
-        m_TargetAssemblyTypeName: Gogobus67Value, Assembly-CSharp
+      - m_Target: {fileID: 1796500066}
+        m_TargetAssemblyTypeName: Gogobus67Number, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -3428,6 +3436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberCard: {fileID: 1796500061}
+  gogobus67Value: {fileID: 1792759889}
   value: 2
 --- !u!1 &1819772698
 GameObject:
@@ -3616,10 +3625,10 @@ RectTransform:
   m_Father: {fileID: 90206059}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 194, y: -180}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1890085408
 MonoBehaviour:
@@ -3703,8 +3712,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1792759889}
-        m_TargetAssemblyTypeName: Gogobus67Value, Assembly-CSharp
+      - m_Target: {fileID: 1890085411}
+        m_TargetAssemblyTypeName: Gogobus67Number, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -3728,6 +3737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberCard: {fileID: 1890085406}
+  gogobus67Value: {fileID: 1792759889}
   value: 6
 --- !u!1 &1891480411
 GameObject:
@@ -3744,7 +3754,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1891480412
 RectTransform:
   m_ObjectHideFlags: 0

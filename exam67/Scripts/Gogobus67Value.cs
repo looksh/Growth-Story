@@ -6,12 +6,11 @@ public class Gogobus67Value : MonoBehaviour
 {
     public Gogobus67Plate plate;
     public Gogobus67ImageChanger imageChanger;
-    public Gogobus67Number number;
     public GameClearController clearController;
     public GameObject card;
 
-    public int disappearValue;
-    public int resultValue;
+    public int disappearValue; // 사라진 값
+    public int resultValue; // 10-사라진 값 계산 결과
 
     private void Start()
     {
@@ -21,29 +20,32 @@ public class Gogobus67Value : MonoBehaviour
     IEnumerator SetValue()
     {
         yield return new WaitUntil( () => plate.isExcute == true);
-        card.GetComponent<Gogobus67Value>().disappearValue = disappearValue;
+        card.GetComponent<Gogobus67Value>().disappearValue = plate.ReturnDisappearCount();
         resultValue = 10 - disappearValue;
         imageChanger.ImageChange();
     }
 
-    int Result()
+    public int Result()
     {
         return resultValue;
     }
 
-    public void OnClick()
+    public void Success()
     {
-        Debug.Log(number.value);
-        Debug.Log("위: number.value, 아래: resultValue");
-        Debug.Log(Result());
-
-        if(number.value == Result())
-        {
-            clearController.UpdateClearCount();
-        }
-        else
-        {
-            Debug.Log("틀렸어용");
-        }
+        clearController.UpdateClearCount();
     }
+
+    //public void OnClick()
+    //{
+    //    Debug.Log("number.value: " + number.value);
+    //    Debug.Log("Result(): " + Result());
+    //    if (number.value == Result())
+    //    {
+    //        clearController.UpdateClearCount();
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("틀렸어용");
+    //    }
+    //}
 }
