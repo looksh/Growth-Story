@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
@@ -42,10 +43,12 @@ public class Answer : MonoBehaviour
 
                 if (hitName == answer.GetComponent<Answer>().value)
                 {
+                    hit.transform.position = new Vector3(answer.transform.position.x, answer.transform.position.y, answer.transform.position.z);
                     SuccessGame();
                 }
                 else
                 {
+                    hit.transform.position = new Vector3(answer.transform.position.x, answer.transform.position.y, answer.transform.position.z);
                     StartCoroutine(FailedGame());
                 }
             }

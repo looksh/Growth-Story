@@ -34,18 +34,4 @@ public class Gogobus67Value : MonoBehaviour
     {
         clearController.UpdateClearCount();
     }
-
-    //public void OnClick()
-    //{
-    //    Debug.Log("number.value: " + number.value);
-    //    Debug.Log("Result(): " + Result());
-    //    if (number.value == Result())
-    //    {
-    //        clearController.UpdateClearCount();
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("Æ²·È¾î¿ë");
-    //    }
-    //}
 }
